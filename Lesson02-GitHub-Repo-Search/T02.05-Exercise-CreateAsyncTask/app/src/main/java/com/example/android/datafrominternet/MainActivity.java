@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // COMPLETED (1) Create a class called GithubQueryTask that extends AsyncTask<URL, Void, String>
-    private class GithubQueryTask extends AsyncTask<URL, Void, String> {
+    public class GithubQueryTask extends AsyncTask<URL, Void, String> {
         @Override
         protected String doInBackground(URL... urls) {
             URL searchUrl = urls[0];
@@ -76,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(String s) {
-            if(s != null && s != "") {
-                mSearchResultsTextView.setText(s);
+        protected void onPostExecute(String gitHubSearchResults) {
+            if(gitHubSearchResults != null && !gitHubSearchResults.equals("")) {
+                mSearchResultsTextView.setText(gitHubSearchResults);
             }
         }
     }
