@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_item_number"
+        android:gravity="start"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="monospace"
+        android:textSize="42sp">
+
+    </TextView>
+
+<!--     DONE (1) Create a layout resource in res/layout/ called number_list_item.xml-->
+
+<!--    // Do steps 2 - 11 within number_list_item.xml-->
+<!--    // DONE (2) Make the root layout a FrameLayout-->
+<!--    // DONE (3) Make the width match_parent and the height wrap_content-->
+<!--    // DONE (4) Set the padding to 16dp-->
+<!--    // DONE (5) Add a TextView as the only child of the FrameLayout-->
+<!--    // DONE (6) Give the TextView an ID "@+id/tv_item_number"-->
+<!--    // DONE (7) Set the height and width to wrap_content-->
+<!--    // DONE (8) Align the TextView to the start of the parent-->
+<!--    // DONE (9) Center the TextView vertically in the layout-->
+<!--    // DONE (10) Set the font family to monospace-->
+<!--    // DONE (11) Set the text size to 42sp-->
+
+</FrameLayout>
