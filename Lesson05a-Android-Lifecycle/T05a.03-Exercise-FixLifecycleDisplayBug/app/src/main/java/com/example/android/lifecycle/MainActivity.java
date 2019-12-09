@@ -74,10 +74,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        // DONE (4) Iterate backwards through mLifecycleCallbacks, appending each String and a newline to mLifecycleDisplay
-        for (String callBack: mLifecycleCallbacks) {
-            mLifecycleDisplay.append(callBack + "\n");
+//        // DONE (4) Iterate backwards through mLifecycleCallbacks, appending each String and a newline to mLifecycleDisplay
+//        for (String callBack: mLifecycleCallbacks) {
+//            mLifecycleDisplay.append(callBack + "\n");
+//        }
+
+        for (int i = mLifecycleCallbacks.size() - 1; i >= 0; i--) {
+            mLifecycleDisplay.append(mLifecycleCallbacks.get(i) + "\n");
         }
+
         // DONE (5) Clear mLifecycleCallbacks after iterating through it
         mLifecycleCallbacks.clear();
         logAndAppend(ON_CREATE);
@@ -139,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
 
         // DONE (2) Add the ON_STOP String to the front of mLifecycleCallbacks
-        mLifecycleCallbacks.add(ON_STOP);
+        mLifecycleCallbacks.add(0, ON_STOP);
 
         logAndAppend(ON_STOP);
     }
@@ -167,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
 
         // DONE (3) Add the ON_DESTROY String to the front of mLifecycleCallbacks
-        mLifecycleCallbacks.add(ON_DESTROY);
+        mLifecycleCallbacks.add(0, ON_DESTROY);
 
         logAndAppend(ON_DESTROY);
     }
